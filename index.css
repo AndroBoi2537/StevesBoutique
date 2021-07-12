@@ -1,0 +1,183 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Pacifico&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans&display=swap");
+
+body {
+  margin: 0;
+}
+
+.container-1,
+.container-2,
+.container-3 {
+  width: 100%;
+  height: 50vw;
+}
+
+:root {
+  --black: #171717;
+  --black2: #252a34;
+  --white: #eaeaea;
+  --red: #da0037;
+  --Roboto: "Roboto", sans-serif;
+  --Pacifico: "Pacifico", cursive;
+  --OpenSans: "Open Sans", sans-serif;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: rgb(177, 177, 177);
+  border-radius: 20px;
+  margin: 1px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  width: 10px;
+}
+
+::-webkit-scrollbar {
+  width: 5px;
+  height: 1px;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  /* background-color: aliceblue; */
+  position: fixed;
+  width: 100%;
+}
+
+nav h1 {
+  color: var(--black2);
+  padding: 0px 20px;
+  font-family: var(--Pacifico);
+  font-size: 2rem;
+}
+
+.link {
+  margin-left: auto;
+}
+
+.link a {
+  padding: 20px;
+  text-decoration: none;
+  font-family: var(--Pacifico);
+  color: var(--black);
+}
+
+button {
+  background-color: aqua;
+  border: none;
+}
+
+button:hover {
+  border: solid 2px black;
+}
+
+.container1 {
+  overflow: hidden;
+  align-items: center;
+  justify-content: center;
+  display: flex;
+  flex-direction: row;
+  background-color: var(--red);
+}
+
+.container1 img {
+  padding: 0px 5px;
+  background-size: contain;
+}
+
+.container-2 {
+  position: sticky;
+  background-color: #ff2e63;
+  z-index: -1;
+}
+
+.container-2 img {
+  width: 50vw;
+  height: 100%;
+}
+
+.container-2 h1 {
+  font-size: 5vw;
+  color: var(--black2);
+  font-family: var(--OpenSans);
+}
+
+.container-2 h1 span {
+  font-size: 5vw;
+  color: var(--black2);
+  font-family: var(--Roboto);
+}
+
+.words {
+  font-size: 1.5vw;
+  font-family: var(--OpenSans);
+}
+
+@media screen and (max-width: 1300px) {
+  .container-2 img {
+    display: none;
+  }
+  .container-2 {
+    height: 100vh;
+  }
+  .words {
+    padding: 20px;
+    position: absolute;
+    text-align: center;
+    top: 40%;
+  }
+  .container-2 h1 {
+    text-align: center;
+    padding: 20px;
+    position: absolute;
+    top: 10%;
+    color: var(--black2);
+  }
+}
+
+@media screen and (min-width: 1300px) {
+  .words {
+    padding: 20px;
+    position: absolute;
+    text-align: left;
+    width: 50%;
+    float: right;
+    left: 53%;
+    top: 47%;
+    animation-name: words;
+    animation-duration: 5s;
+  }
+
+  @keyframes words {
+    0% {
+      right: -20%;
+      top: 60%;
+    }
+  }
+  .container-2 h1 {
+    padding: 20px;
+    position: absolute;
+    text-align: left;
+    top: 10%;
+    left: 53%;
+
+    animation-name: contain;
+    animation-duration: 2s;
+  }
+
+  @keyframes contain {
+    0% {
+      left: 50%;
+      top: 10%;
+    }
+  }
+}
+
+footer {
+  width: 100%;
+  height: 50vh;
+  background-color: var(--black);
+}
